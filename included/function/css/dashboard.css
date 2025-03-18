@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#container{
+    background-color: #e7e6e6;
+}
+
+.bara-control{
+    line-height: 59px;
+    padding-left: 20px;
+}
+
+.container-content{
+    position: absolute;
+    top: 60px;
+    padding: 20px;
+    display: grid;
+    width: calc(100% - 40px);
+    grid-template-columns: repeat(auto-fit,400px);
+    grid-gap: 20px;
+    grid-template-rows: repeat(auto-fit,auto);
+}
+
+.meniu-linkuri{
+    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+    width: 400px;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.cap-meniu{
+    background-color: #373433;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 80px auto;
+}
+
+.linkuri-dash{
+    padding: 20px;
+}
+
+h3{
+    font-size: 18px;
+}
+
+.linkuri-dash a{
+    display: inline-block!important;
+    font-size: 18px;
+    color: #3665a3;
+    text-decoration: none;
+}
+
+.linkuri-dash a:hover{
+    text-decoration: underline;
+}
+
+.linkuri-dash a:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.linkuri-dash a:hover{
+    background-color: transparent;
+}
+
+.linkuri-dash a::selection{
+    background-color: transparent;
+}
+
+.cap-meniu h3{
+    color: white;
+    line-height: 80px;
+    margin: 0px!important;
+    padding-left: 10px;
+}
+
+.icon-intrunire{
+    border-top-left-radius: 3px;
+    background-color: #4c4948;
+}
+
+.icon-intrunire span{
+    position: relative;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media only screen and (max-width: 500px) {
+    .container-content{
+        position: absolute;
+        top: 60px;
+        padding: 20px;
+        display: grid;
+        width: calc(100% - 40px);
+        grid-template-columns: 100%;
+        grid-gap: 20px;
+        grid-template-rows: repeat(auto-fit,auto);
+    }
+
+    .bara-control{
+        line-height: 59px;
+        padding-left: 20px;
+    }
+    h3{
+        font-size: 15px;
+    }
+    .meniu-linkuri{
+        box-shadow: 0px 0px 2px rgb(0, 0, 0);
+        width: 100%;
+        border-radius: 3px;
+        background-color: white;
+    }
+
+    .cap-meniu{
+        background-color: #373433;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        height: 50px;
+        display: grid;
+        grid-template-columns: 40px auto;
+    }
+    .cap-meniu h3{
+        color: white;
+        line-height: 50px;
+        margin: 0px!important;
+        padding-left: 10px;
+    }
+    .icon-intrunire span{
+        position: relative;
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .linkuri-dash a{
+        display: inline-block!important;
+        font-size: 16px;
+        color: #3665a3;
+        text-decoration: none;
+    }
+}
+@media only screen and (max-width: 345px) {
+    h3{
+        font-size: 3.7vw;
+    }
+    .linkuri-dash a{
+        font-size: 5vw;
+    }
+    .container-content{
+        grid-template-columns: 100%;
+    }
+    h3{
+        overflow: hidden;
+    }
+    .bara-control{
+        font-size: 14px;
+    }
+}

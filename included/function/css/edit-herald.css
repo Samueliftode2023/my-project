@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f2f1ef;
+}
+
+.container-content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+}
+
+#panou-de-lucru{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40px calc(100% - 40px);
+    box-shadow: 1px 0px 0px rgba(128, 128, 128, 0.483);
+    z-index: 3;
+    background-color: #f8f8f7;
+}
+
+#bara-pentru-selectat{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+
+#bara-pentru-selectat div{
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 200ms;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    z-index: 10;
+}
+
+#bara-pentru-selectat div::selection{
+    background-color: transparent;
+}
+
+#bara-pentru-selectat div:hover{
+    border-bottom: 2px solid #292929;
+}
+
+.selectat{
+    border-bottom: 2px solid #4a6da7!important;
+}
+
+h4{
+    text-align: center;
+    font-size: 18px;
+}
+
+#edit-vestitor label select,
+#edit-vestitor label input,
+#add-vestitor label select,
+#add-vestitor label input{
+    margin-top: 5px;
+    font-size: 16px !important;
+    width: 300px;
+}
+
+#edit-vestitor,
+#add-vestitor{
+    width: 320px;
+    padding: 10px 20px 30px 20px;
+    box-shadow: 0px 0px 1px rgb(0, 0, 0);
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 5px;
+}
+
+#delete-vestitor{
+    border-radius: 5px;
+    position: relative;
+    top: 50%;
+    transform: translate(0%,-50%);
+}
+
+#delete-vestitor label,
+#edit-vestitor label,
+#add-vestitor label{
+    font-size: 18px;
+    width: 300px;
+    margin: auto;
+}
+
+#delete-vestitor button,
+#edit-vestitor button,
+#add-vestitor button{
+    width: 300px;
+    margin: auto;
+}
+
+#bara-pentru-lista{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+
+#bara-pentru-lista div{
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 200ms;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    z-index: 2;
+}
+
+#bara-pentru-lista div::selection{
+    background-color: transparent;
+}
+
+#bara-pentru-lista div:hover{
+    border-bottom: 2px solid #292929;
+}
+
+#panou-de-vizualizat{
+    height: 100%;
+    background-color: #f8f8f7;
+}
+
+#lista-vizual-add{
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-rows: 40px repeat(13,30px);
+    height: 510px;
+    overflow: auto;
+    z-index: 1;
+    box-shadow: 0px 1px 0px rgba(128, 128, 128, 0.483);
+
+}
+
+.red-one{
+    background-color: transparent;
+    color: #292929;
+    border: 1px solid #292929;
+    position: absolute;
+    right: 20px;
+    top:50%;
+    transform: translate(0%,-50%);
+    cursor: pointer;
+}
+
+#panou-editare{
+    overflow: auto;
+}
+
+.green-one{
+    position: absolute;
+    right: 170px;
+    top:50%;
+    transform: translate(0%,-50%);
+    cursor: pointer;
+    border: 1px solid #4a6da7;
+}
+
+.red-one:hover,
+.green-one:hover{
+    outline:#4a6da7 solid 1px;
+}
+
+.disabled-class:hover{
+    outline:#4a6da7 solid 0px!important;
+}
+
+.disabled-class{
+    cursor: not-allowed;
+    background-color: transparent;
+    color: gray;
+    border: 1px solid gray;
+}
+
+#sterge-vestitorii{
+    width: calc(100% - 35px);
+    height: calc(510px - 10px);
+    margin: 0px 20px;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 5px));
+    grid-template-rows: repeat(10,50px);
+    padding: 5px;
+    grid-gap: 5px;
+    margin-bottom: 5px;
+}
+
+input[type='checkbox']{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+}
+
+#sterge-vestitorii label{
+    position: relative;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    box-shadow: 0px 0px 1px rgb(0, 0, 0);
+    font-size: 16px;
+    background-color: white;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#sterge-vestitorii label::selection{
+    background-color: transparent;
+}
+
+.tabel-liste{
+    background-color: #4a6da7;
+    color: white;
+    text-align: center;
+    display: grid;
+    grid-template-columns:40% 30% calc(30% - 40px) 40px;
+    padding: 10px 0px;
+}
+
+#panouri-vizuale{
+    position: relative;
+    margin: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 82px);
+    background-color: white;
+    box-shadow: 0px 0px 1px rgb(0, 0, 0);
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.mesaj-lista{
+    position: absolute!important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+    font-style: italic;
+    color: gray;
+    border: 0px solid black!important;
+}
+
+#lista-vestitori-add div,
+#lista-vestitori-edit div,
+#lista-vestitori-delete div{
+    border-bottom: 1px solid gray;
+    position: relative;
+}
+
+#lista-vestitori-add,
+#lista-vestitori-edit,
+#lista-vestitori-delete{
+    text-align: center;
+    display: grid;
+    grid-template-columns:40% 30% calc(30% - 40px) 40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+.marcheaza{
+    background-color: #e7e7e7;
+}
+
+.remove-c{
+    border-bottom: 1px solid gray;
+    position: relative;
+    top:50%;
+    transform: translate(0%,-50%);
+    cursor: pointer;
+    line-height: 40px;
+    font-size: 21px;
+    color: rgb(0, 0, 0);
+}
+
+.remove-c:hover{
+    color: rgb(198, 15, 15);
+}
+
+#panel-download-key{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    min-height: 200px;
+    padding: 20px;
+    box-shadow: 0px 0px 1px black;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 10;
+}
+
+.back-panel{
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(93, 93, 93, 0.699);
+    z-index: 9;
+}
+
+#show-key{
+    background-color: #292929;
+    color: white;
+    width: calc(100% - 20px);
+    height: 300px;
+    overflow: auto; 
+    word-wrap: break-word;
+    border-radius: 5px;
+    border:10px solid #292929;
+    border-right: 0px solid black;
+    padding-right: 10px;
+}
+
+.copy-button{
+    background-color: rgb(255, 255, 255);
+    color:white;
+    position: absolute;
+    right: 32px;
+    top: 30px;
+    font-size:14px;
+    width: 107px!important;
+    display: grid;
+    grid-template-columns: 30px 73px;
+    padding: 2px;
+    color: black;
+    cursor: pointer;
+}
+
+.copy-button::selection{
+    background-color: transparent;
+}
+
+.copy-button span{
+    line-height: 30px;
+    text-align: left;
+}
+
+.material-symbols-outlined{
+    font-size: 18px;
+    text-align: center!important;
+}
+
+#show-key::-webkit-scrollbar-track {
+    background: #292929; 
+    border-radius: 5px;
+  }
+
+#generate-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    cursor: pointer;
+}  
+
+#butoane-gestionare-cheie{
+    width: calc(99.9% - 10px);
+    display: grid;
+    grid-template-columns: repeat(3,33.3%);
+    margin-top: 5px;
+    grid-gap: 5px;
+}
+
+#butoane-gestionare-cheie button{
+    width: 100%;
+    cursor:pointer;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#butoane-gestionare-cheie button span{
+    line-height: 15px;
+}
+
+#butoane-gestionare-cheie button .material-symbols-outlined{
+    position: relative;
+    top: 50%;
+    transform: translate(0%,-50%);
+}
+
+#confrim-copy{
+    color: green;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#confrim-copy::selection{
+    background-color: transparent!important;
+}
+
+#panel-download-key button span::selection{
+    background-color: transparent!important;
+}
+
+#zona-finish button{
+    margin-top: 5px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+
+#zona-finish{
+    margin-bottom: 0px;
+}
+
+#mask-key{
+    background-color: transparent;
+    color: black;
+    padding: 40px;
+    border-radius: 2px;
+    width: calc(100% - 80px);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 5px;
+    border: 1px dashed black;
+}
+
+.togheter{
+    width: 180px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 30px 150px;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+
+.togheter span::selection{
+    background-color: transparent;
+}
+
+#close-panel{
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    cursor: pointer;
+}
+
+#close-panel:hover{
+    background-color: red;
+    color: white;
+}

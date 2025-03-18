@@ -1,0 +1,114 @@
+h2{
+    text-align: center;
+}
+
+form{
+    top: 200px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0%);
+    padding: 20px;
+    box-shadow: 0px 0px 3px rgb(146, 146, 146);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.tab{
+    box-shadow: 0px 0px 3px gray;
+    position: relative;
+    top: 0px;
+    height: 150px;
+    background-color: white;
+    overflow: auto;
+}
+
+.ready-download{
+    display: inline-block;
+    line-height: 38.5px;
+    font-size: 16px;
+    width: 50%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    cursor:not-allowed;
+    background-color: rgb(122, 122, 122);
+}
+
+.ready{
+    background-color: #4caf50!important;
+    cursor:default!important;
+}
+
+#send-to-upload{
+    background-color: white;
+    box-shadow: 0px 0px 3px rgb(146, 146, 146);
+    position:absolute;
+    padding: 20px;
+    width: 300px;
+}
+
+details{
+    margin-bottom:20px;
+    text-align: center;
+}
+
+.up-load{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+
+#send-to-upload{
+    top: 200px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+
+#code-source{
+    background-color: black;
+    padding: 10px;
+    position: relative;
+    width: calc(100% - 20px);
+    left: 0px;
+    overflow: hidden;
+    z-index: 1;
+    height: 40px;
+    color: white;
+}
+
+#copy-f{
+    position: absolute;
+    z-index: 2;
+    color: rgb(76, 76, 76);
+    right: 0px;
+    padding: 10px;
+    text-align: center;
+    width: 80px;
+    cursor: pointer;
+    background-color: #ddddddf6;
+    bottom: 0px;
+}
+#copy-f:active{
+    background-color: #4caf50!important;
+}
+.parent{
+    position: relative;
+}
+li{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

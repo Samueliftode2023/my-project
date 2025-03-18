@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f2f1ef;
+}
+
+#print-teme{
+    z-index: 999;
+    padding-left: 5px;
+    padding-top: 7px;
+    height: calc(100% - 7px);
+}
+    
+#print-teme{
+    position: relative;
+    box-shadow: 0px 1px 0px rgba(128, 128, 128, 0.483);
+    background-color: #f2f1ef;
+}
+
+#print-teme label{
+    display: inline-block;
+}
+
+#year{
+    width: 100px;
+    font-size: 18px;
+}
+
+#month{
+    width: 140px;
+    font-size: 18px;
+}
+.tema{
+    width: calc(100% - 70px);
+    height: 447px;
+    background-color: white;
+    box-shadow: 0px 0px 1px rgb(0, 0, 0);
+    padding: 40px 35px;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tema span{
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.tema div{
+    padding: 5px 10px;
+}
+
+.pagina-teme{
+    width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    margin: auto;
+    margin-top: 10px;
+}
+
+.content{
+    overflow: auto;
+    height: 100%;
+}
+
+.content::-webkit-scrollbar-track{
+    background-color: #525659;
+}
+
+h4{
+    text-align: center;
+}
+
+.detalii{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+}
+
+.detalii p{
+    margin: 0px;
+    padding: 0px;
+    font-size: 17px;
+    border-bottom: 1px dashed gray;
+}
+
+.sala-locatie{
+    margin-top: 10px;
+}
+
+.sala-locatie span{
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.detalii span{
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    width: fit-content;
+    white-space: nowrap;
+    margin-right: 5px;
+    position: relative;
+    position: relative;
+    top: 5px;
+}
+
+label{
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: 30px max-content;
+}
+
+label span{
+    font-size: 14px!important;
+    font-weight: normal!important;
+    position: relative;
+    top: 2px;
+}
+
+label input{
+    width: 20px;
+}
+
+.nota{
+    text-align: justify;
+}
+
+.nota, .file-code{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.scade{
+    font-size: 14px!important;
+}
+
+.creste{
+    font-size: 14px!important;
+    text-transform: uppercase!important;
+}
+
+#print{
+    transition: 200ms;
+    font-size: 22px;
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 100px;
+    background-color: rgb(162, 8, 8);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0px 0px 5px gray;
+    cursor: pointer;
+    opacity: 0.4;
+}
+#print:hover{
+    opacity: 1;
+}
+
+#print::selection{
+    background-color: transparent;
+}
+
+@media print {
+    #print{
+        transition: 500ms;
+        font-size: 22px;
+        position: fixed;
+        right: 20px;
+        bottom: 10px;
+        text-align: center;
+        padding: 15px;
+        border-radius: 100px;
+        background-color: rgb(162, 8, 8);
+        color: white;
+        font-weight: 600;
+        box-shadow: 0px 0px 5px gray;
+        cursor: pointer;
+        opacity: 0.4;
+        display: none;
+    }
+    
+    #print-teme{
+        z-index: 999;
+        padding-left: 5px;
+        padding-top: 7px;
+        height: calc(100% - 7px);
+        display: none;
+    }
+
+    .nota, .file-code{
+        font-size: 14.62px;
+        margin-top: 10px;
+    }
+    .tema{
+        width: calc(100% - 70px);
+        height: 447px;
+        background-color: white;
+        box-shadow: 0px 0px 0px rgb(0, 0, 0);
+        padding: 40px 35px;
+        font-family: "Roboto", serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 0px;
+        box-shadow: 0px 0px 1px rgb(0, 0, 0);
+    }
+    .content{
+        overflow: initial;
+        height: 100%;
+    }
+    .pagina-teme{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        margin: none;
+        margin-top: 0;
+        box-shadow: none;
+    }
+    #container{
+        background-color: white;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        display: grid;
+        grid-template-columns:100%;
+        overflow: initial;
+    }
+    .bara-control{
+        display: none;
+    }
+    @page {
+        margin-top: 1cm;
+        margin: 0px;
+    }
+    .tema{
+        break-inside: avoid;
+    }
+    body{
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Open Sans', sans-serif;
+        background-color: white;
+    }
+}
+
+@media only screen and (max-width: 500px) { 
+    #print{
+        bottom: 60px;
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .pagina-teme{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,100%);
+        margin: auto;
+        margin-top: 10px;
+    }
+}

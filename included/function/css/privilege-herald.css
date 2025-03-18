@@ -1,0 +1,98 @@
+input[type='checkbox']{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+}
+
+.bara-control{
+    line-height: 59px;
+    padding-left: 20px;
+}
+
+.content-editare{
+    display: grid;
+    grid-template-columns: calc(100% - 300px) 300px;
+}
+
+#vestitori-privilegii label{
+    position: relative;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    box-shadow: 0px 0px 1px rgb(0, 0, 0);
+    font-size: 18px;
+}
+#vestitori-aprobari, #vestitori-privilegii label::selection{
+    background-color: transparent;
+}
+#vestitori-privilegii{
+    position: relative;
+    width:calc(100% - 10px);
+    grid-gap: 5px;
+    overflow: auto;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(10,50px);
+    box-shadow: 0px 0px 1px gray;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#search-bar{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    padding: 10px;
+    background-color: aliceblue;
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+#search-bar select{
+    width: 200px;
+}
+
+#save{
+    background-color: rgb(74, 162, 19);
+}
+
+#save, #select-vestitori, #select-privilegii{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 0px 2px black;
+}
+
+#vestitori-aprobari{
+    position: relative;
+    overflow: auto;
+    padding: 5px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(1, auto);
+    width: calc(100% - 10px);
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: aliceblue;
+}
+#vestitori-aprobari label{
+    position: relative;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    box-shadow: 0px 0px 1px rgb(0, 0, 0);
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+}
+
+.mess{
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    transform: translate(0%,-50%);
+    text-align: center;
+    width: 100%;
+}

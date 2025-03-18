@@ -1,0 +1,313 @@
+#tools, #custom-padding, #custom-grid, .element-style{    
+    user-select: none; /* Nu permite selectarea textului */
+    -webkit-user-select: none; /* Suport pentru Chrome, Safari */
+    -moz-user-select: none; /* Suport pentru Firefox */
+    -ms-user-select: none; /* Suport pentru Internet Explorer/Edge */
+}
+
+
+.bara-control{
+    line-height: 59px;
+    padding-left: 20px;
+}
+
+.content-container{
+    background-color: white;
+}
+
+#table-panel{
+    background-color: white;
+    box-shadow: 0px 0px 1px black;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 300px;
+    width: 100%;
+}
+
+#table-list{
+    padding: 10px;
+    height: 150px;
+    overflow: auto;
+}
+
+h3{
+    text-align: center;
+}
+
+.style-buton{
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    width: 200px;
+    background-color: #4a6da7;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.message-tabel{
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translate(0%,-50%);
+    color: gray;
+}
+
+.background-panel{
+    background-color: rgba(0, 0, 0, 0.88);
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.panel-create-table{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+}
+
+.panel-create-table button{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+
+.panel-create-table input{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+
+.panel-create-table label, .panel-create-table input{
+    text-align: center;
+}
+
+.panel-create-table input{
+    width: 100%;
+}
+
+.close-panel{
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.buton-enter-edit{
+    background-color: #779bd6;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#tools-content-json{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: calc(100% - 200px) 200px;
+    grid-template-rows: 100px calc(100% - 100px);
+}
+
+
+#content-json{
+    position: relative;
+    left: 10px;
+    top: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    z-index: 1;
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+#tools{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    box-shadow: 0px 2px 5px gray;
+    width: calc(100% - 20px);
+    margin: 0px 10px;
+    z-index: 2;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30px calc(100% - 30px);
+}
+
+#manage-elements{
+    position: relative;
+    grid-row: 1/3;
+    grid-column: 2/3;
+    box-shadow: 0px 2px 5px gray;
+    border-radius: 10px;
+    width: calc(100% - 10px);
+    height: calc(100% - 20px);
+    padding: 5px;
+}
+
+.butoane-tools{
+    display: flex;
+    z-index: 10;
+    box-shadow: 0px 1px 0px rgba(128, 128, 128, 0.315);
+}
+
+.butoane-tools div{
+    line-height: 30px;
+    display: flex;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+#aspect-pagina, #elemente-pagina{
+    width: 125px;
+    display: grid;
+    grid-template-columns: repeat(2,60px);
+    grid-gap: 5px;
+}
+
+#aspect-pagina span, #elemente-pagina span{
+    color: black;
+    line-height: 55px;
+    font-size: 26px;
+}
+
+#aspect-pagina .buton-margini,
+#aspect-pagina .buton-grid, 
+#elemente-pagina .buton-margini,
+#elemente-pagina .buton-grid
+{
+    width: 60px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#aspect-pagina div:hover,
+#elemente-pagina div:hover{
+    background-color: rgb(234, 234, 234);
+}
+
+#aspect-pagina div div,
+#elemente-pagina div div{
+    font-size: 13px;
+}
+
+.buton-margini, .buton-margini div{
+    border-bottom-left-radius: 10px;
+}
+
+.default-padding{
+    background-color: rgb(251, 133, 106);
+    position: absolute;
+}
+
+#custom-padding, #custom-grid{
+    position: absolute;
+    border: 1px solid gray;
+    background: white;
+    z-index: 11;
+    padding: 10px;
+    border-radius: 5px;
+    width: 140px;
+    padding-top: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#custom-padding input, #custom-grid input{
+    width: 140px;
+    border-radius: 100px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#custom-padding label, #custom-grid label{
+    font-size: 16px;
+    text-align: center;
+}
+
+.mutare-padding-panel{
+    width: 100%;
+    height: 40px;
+    background: gainsboro;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    cursor: move;
+}
+
+.back-grid{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0.7;
+    z-index: 10;
+}
+
+.grid-single-div{
+    border: 0.5px dashed #f0bf4c;
+    width:calc(100% - 1px);
+    height: calc(100% - 1px);
+    position: relative;
+}
+
+.toggle-grid input{
+    transform: scale(1.4);
+}
+
+.element-style{
+    width: 100%;
+    background-color: #999999;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 100px;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0px 0px 1px black;
+    cursor: pointer;
+}
+
+.element-style:hover{
+    background-color: #4a6da7!important;
+}
+
+.select-element{
+    background-color: #4a6da7!important;
+}
+
+#manage-elements{
+    overflow: auto;
+}
+
+#manage-elements div{
+    margin-bottom: 5px;
+}
+
+.disbaled-class{
+    opacity: 0.5;
+    cursor:not-allowed!important;
+}

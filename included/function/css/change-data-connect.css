@@ -1,0 +1,75 @@
+.optiuni-date{
+    width: calc(100% - 10px);
+    max-width: 500px;
+    height: calc(100% - 10px);
+    margin: auto;
+    padding: 5px 0px;
+    overflow: auto;
+}
+
+.schimba-numele-cheii,
+.schimba-parola, 
+.schimba-username{
+    max-width: 300px;
+    width: calc(100% - 20px);
+    margin: auto;
+    box-shadow: 0px 1px 0px gray;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.schimba-numele-cheii input, 
+.schimba-parola input, 
+.schimba-username input{
+    max-width: 300px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.schimba-numele-cheii button, 
+.schimba-parola button,
+.schimba-username button{
+    position: relative;
+    margin: auto;
+    width: 150px;
+    cursor: pointer;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+
+#nume-curent, #cheie-curenta{
+    font-size: 18px;
+}
+
+#nume-curent-display, #nume-cheie-curent-display{
+    color: #4a6da7;
+    font-weight: 900;
+}
+
+.format-pss{
+    position: absolute;
+    background-color: white;
+    width: 278px;
+    padding: 10px;
+    box-shadow: 0px 0px 3px gray;
+}
+
+details{
+    width: 300px;
+    margin: auto;
+    cursor: pointer;
+}
+
+details div::selection{
+    background-color: transparent;
+}
+
+details summary::selection{
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 500px) {
+    label{
+        font-size: 16px;
+    }
+}
